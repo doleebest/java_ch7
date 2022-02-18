@@ -1,29 +1,33 @@
 class Tv {
-	boolean power; // юЭ©Ь╩Себ(on/off)
-	int channel;	// ц╓Ён
+	boolean power; // Л═└Л⌡░Л┐│М┐°(on/off)
+	int channel;	// Л╠└К└░
 
 	void power()       {   power = !power; }
 	void channelUp()   {   ++channel;      }
 	void channelDown() {   --channel;      }
 }
+// К╤─К╙╗ К╘╓К╡└ 5Й╟°
 
-class SmartTv extends Tv {  // CaptionTv╢б Tv©║ д╦╪г(юз╦╥)ю╩ ╨╦©╘аж╢б ╠Б╢ию╩ цъ╟║
-	boolean caption;     // д╦╪г╩Себ(on/off)
+class SmartTv extends Tv {  // CaptionTvК┼■ TvЛ≈░ Л╨║Л┘≤(Л·░К╖┴)Л²└ КЁ╢Л≈╛Лё╪К┼■ Й╦╟К┼╔Л²└ Л╤■Й╟─
+	boolean caption;     // Л╨║Л┘≤Л┐│М┐°(on/off)
 	void displayCaption(String text) {
-		if (caption) {   // д╦╪г ╩Себ╟║ on(true)юо ╤╖╦╦ text╦╕ ╨╦©╘ аь╢ы.
+		if (caption) {   // Л╨║Л┘≤ Л┐│М┐°Й╟─ on(true)Л²╪ К∙▄К╖▄ textК╔╪ КЁ╢Л≈╛ Л╓─К▀╓.
 			System.out.println(text);
 		}
 	}
 }
+//Л·░Л▀² К╘╓К╡└ 2Й╟° + К╤─К╙╗ К╘╓К╡└ 5Й╟° = Л╢² 7Й╟°
 
 class Ex7_1 {
 	public static void main(String args[]) {
 		SmartTv stv = new SmartTv();
-		stv.channel = 10;			// а╤╩С е╛╥║╫╨╥н╨нем ╩С╪с╧чю╨ ╦Б╧Ж
-		stv.channelUp();			// а╤╩С е╛╥║╫╨╥н╨нем ╩С╪с╧чю╨ ╦Б╧Ж
+		stv.channel = 10;			// Л║╟Л┐│ М│╢К·≤Л┼╓К║°К╤─М└╟ Л┐│Л├█К╟⌡Л²─ К╘╓К╡└
+		stv.channelUp();			// Л║╟Л┐│ М│╢К·≤Л┼╓К║°К╤─М└╟ Л┐│Л├█К╟⌡Л²─ К╘╓К╡└
 		System.out.println(stv.channel);
 		stv.displayCaption("Hello, World");
-		stv.caption = true;	// д╦╪г(юз╦╥) ╠Б╢ию╩ др╢ы.	       
+		stv.caption = true;	// Л╨║Л┘≤(Л·░К╖┴) Й╦╟К┼╔Л²└ Л╪═К▀╓.	       
 		stv.displayCaption("Hello, World");
 	}
-}
+	//Л║╟Л┐│Л²≤ КЁ─Й╡╫Л²─ Л·░Л├░Л≈░Й╡▄ Л≤│М√╔
+	//Л·░Л├░Л²≤ КЁ─Й╡╫Л²─ Л║╟Л┐│Л≈░Й╡▄ Л≤│М√╔
+	//Л·░Л├░>Л║╟Л┐│ (К╡╓К▀╓Л²╢Л√╢Й╥╦К·╗)
